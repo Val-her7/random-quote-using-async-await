@@ -20,17 +20,17 @@ function displayQuote(quote) {
         QUOTE.innerHTML = "Sorry, we are having a problem with your random citation, please try again...";
     } else {
         const QUOTE = document.getElementById("quote");
-        QUOTE.innerHTML = quote.quote;
+        QUOTE.innerHTML = '" ' + quote.quote;
 
         const AUTHOR = document.getElementById("author");
-        AUTHOR.textContent = quote.author;
+        AUTHOR.textContent = "- " + quote.author;
 
         const IMAGE = document.getElementById("image");
         IMAGE.src = quote.photo;
         IMAGE.alt = quote.author;
 
         const CITATIONS = document.getElementById("number-of-quotes");
-        CITATIONS.textContent = quote.total_quotes;
+        CITATIONS.textContent = quote.total_quotes + ` ${quote.total_quotes <= 1 ? "quote" : "quotes"}`;
     }
 }
 
