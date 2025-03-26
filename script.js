@@ -14,18 +14,24 @@ async function fetchApi() {
 }
 
 function displayQuote(quote) {
-    const QUOTE = document.getElementById("quote");
-    QUOTE.innerHTML = quote.quote;
+    
+    if(typeof(quote) === "undefined") {
+        const QUOTE = document.getElementById("quote");
+        QUOTE.innerHTML = "Sorry, we are having a problem with your random citation, please try again...";
+    } else {
+        const QUOTE = document.getElementById("quote");
+        QUOTE.innerHTML = quote.quote;
 
-    const AUTHOR = document.getElementById("author");
-    AUTHOR.textContent = quote.author;
+        const AUTHOR = document.getElementById("author");
+        AUTHOR.textContent = quote.author;
 
-    const IMAGE = document.getElementById("image");
-    IMAGE.src = quote.photo;
-    IMAGE.alt = quote.author;
+        const IMAGE = document.getElementById("image");
+        IMAGE.src = quote.photo;
+        IMAGE.alt = quote.author;
 
-    const CITATIONS = document.getElementById("number-of-quotes");
-    CITATIONS.textContent = quote.total_quotes;
+        const CITATIONS = document.getElementById("number-of-quotes");
+        CITATIONS.textContent = quote.total_quotes;
+    }
 }
 
 document.getElementById("button").addEventListener("click", async function getRandomQuote() {
