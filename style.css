@@ -3,3 +3,67 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    min-height: 100vh;
+    max-width: 70vw;
+    margin:  auto;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(154, 140, 152);
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    margin-top: 2rem;
+    text-align: center;
+    padding: 1rem;
+    border: 3px solid rgb(201, 173, 167);
+    border-radius: 0.8rem;
+    background-color: white;
+    max-width: 400px;
+}
+
+#quote {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    font-style: italic;
+    color: black;
+}
+
+#author {
+    font-size: 1.2rem;
+    color: gray;
+}
+
+#image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+#number-of-quotes {
+    font-size: 0.8rem;
+    color: black;
+    margin-bottom: 1rem;
+}
+
+button {
+    margin-bottom: 2rem;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: rgb(74, 78, 105);
+    color: white;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+button:hover {
+    background-color: rgb(201, 173, 167);
+    color: black;
+}
