@@ -34,6 +34,11 @@ function displayQuote(quote) {
     }
 }
 
+window.onload = async () => {
+    let res = await fetchApi();
+    displayQuote(res); 
+}
+
 document.getElementById("button").addEventListener("click", async function getRandomQuote() {
     let res = await fetchApi();
     displayQuote(res);  
